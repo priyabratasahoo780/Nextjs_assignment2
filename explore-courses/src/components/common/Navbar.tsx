@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const isTopicsActive = pathname.startsWith("/topics") || pathname.startsWith("/categories") || pathname.startsWith("/filter");
+  const isTopicsActive = pathname.startsWith("/topics");
   const isAboutActive = pathname === "/about";
   const isCoursesActive = (pathname === "/courses" || pathname.startsWith("/courses/") || pathname === "/") && !isTopicsActive && !isAboutActive;
 
